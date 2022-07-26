@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.source = { :path => '.' }
   s.platform     = :ios, '13.0'
   s.swift_version = '5.3'
-  s.source       = { :git => "https://github.com/quanlebbv/MyFrameworkDistribution.git", :tag => "#{s.version}" }
+  s.source       = { :git => "git@github.com:quanlebbv/MyFrameworkDistribution.git", :tag => "#{s.version}" }
   s.ios.deployment_target = '10.0'
   vendored_frameworks = "MyFramework.xcframework"
 end
