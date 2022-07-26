@@ -1,0 +1,16 @@
+name: Repository Dispatch
+on:
+  repository_dispatch:
+    types: [my-event]
+jobs:
+  myEvent:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+    - name: Checkout submodules
+      run: git submodule update --init --recursive
+    - name: Run shell
+      run: |
+        cd ./source
+        sh build_xcframework.sh
