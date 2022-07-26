@@ -7,11 +7,10 @@ Pod::Spec.new do |s|
   s.version      = package["version"]
   s.summary      = package["description"]
   s.homepage     = package["homepage"]
-  s.license      = package["license"]
-  s.authors      = package["author"]
+  s.author       = { 'Name' => 'info@example.com' }
+  s.license      = { :type => 'Custom', :file => 'LICENSE' }
 
-  s.source = { :path => '.' }
-  s.platform     = :ios, '13.0'
+  s.platform     = :ios
   s.swift_version = '5.3'
   s.source       = { :git => "git@github.com:quanlebbv/MyFrameworkDistribution.git", :tag => "#{s.version}" }
   s.ios.deployment_target = '10.0'
