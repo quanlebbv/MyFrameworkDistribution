@@ -1,1 +1,1 @@
-# MyFrameworkDistribution
+# swiftpm-xcframework-distribution
