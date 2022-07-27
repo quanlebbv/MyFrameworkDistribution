@@ -9,6 +9,12 @@ jobs:
     runs-on: macos-latest
     steps:
     - uses: actions/checkout@v2
+    - name: Checkout submodules
+      run: git submodule update --init --recursive
+    - name: Run shell
+      run: |
+        cd ./source
+        sh ./build_xcframework.sh
     - name: Auto tag
       uses: Klemensas/action-autotag@stable
       with:
