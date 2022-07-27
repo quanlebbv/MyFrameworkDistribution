@@ -9,8 +9,8 @@ Pod::Spec.new do |s|
   s.homepage     = package["homepage"]
   s.author       = { 'Name' => 'info@example.com' }
   s.license      = { :type => 'Custom', :file => 'LICENSE' }
-  s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
+  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
   s.platform     = :ios
   s.swift_version = '5.3'
   s.source       = { :git => "git@github.com:quanlebbv/MyFrameworkDistribution.git", :tag => s.version.to_s }
