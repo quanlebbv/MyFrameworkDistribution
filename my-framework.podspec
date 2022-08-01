@@ -1,12 +1,8 @@
-require "json"
-
-package = JSON.parse(File.read(File.join(__dir__, "./my-framework/package.json")))
-
 Pod::Spec.new do |s|
-  s.name         = package["name"]
-  s.version      = package["version"]
-  s.summary      = package["description"]
-  s.homepage     = package["homepage"]
+  s.name         = 'my-framework'
+  s.version      = '1.0.32'
+  s.summary      = 'abc'
+  s.homepage     = 'xyz'
   s.author       = { 'Name' => 'info@example.com' }
   s.license      = { :type => 'Commercial', :text => 'See https://myframework.license.com' }
   s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
