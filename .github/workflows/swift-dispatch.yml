@@ -1,16 +1,13 @@
-name: Repository Dispatch
-on:
-  repository_dispatch:
-    types: [my-event]
+name: dispatch receiver
+
+on: [repository_dispatch]
+
 jobs:
-  myEvent:
+  build:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
-    - name: Checkout submodules
-      run: git submodule update --init --recursive
-    - name: Run shell
+    - uses: actions/checkout@v1
+    - name: dispatch trigger
+      if: github.event.action == "making-framework"
       run: |
-        cd ./source
-        sh build_xcframework.sh
+        echo "repository_dispatch triggered" 
