@@ -14,3 +14,9 @@ jobs:
       run: |
         cd ./source
         sh ./build_xcframework.sh
+    - name: Publish to CocoaPod register
+      env:
+        COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
+      if: github.event.action == 'making-framework'  
+      run: |
+        pod trunk push my-framework.podspec
