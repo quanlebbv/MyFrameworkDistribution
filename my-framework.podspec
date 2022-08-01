@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'my-framework'
-  s.version      = '1.0.37'
+  s.version      = '1.0.38'
   s.summary      = 'abc'
   s.homepage     = 'xyz'
   s.author       = { 'Name' => 'info@example.com' }
