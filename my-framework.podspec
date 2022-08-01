@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.summary      = package["description"]
   s.homepage     = package["homepage"]
   s.author       = { 'Name' => 'info@example.com' }
-  s.license      = { :type => 'Custom', :file => 'LICENSE' }
+  s.license      = { :type => 'Commercial', :text => 'See https://myframework.license.com' }
   s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
   s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
   s.platform     = :ios
