@@ -4,10 +4,11 @@ on: [repository_dispatch]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
     - uses: actions/checkout@v1
     - name: dispatch trigger
       if: github.event.action == 'making-framework'
       run: |
-        echo "repository_dispatch triggered" 
+        cd ./source
+        sh ./build_xcframework.sh
