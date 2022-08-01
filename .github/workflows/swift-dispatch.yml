@@ -8,6 +8,6 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: dispatch trigger
-      if: github.event.action == "making-framework"
+      if: github.event.action == 'making-framework'
       run: |
         echo "repository_dispatch triggered" 
