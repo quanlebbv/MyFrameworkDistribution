@@ -19,7 +19,3 @@ git push
 
 git tag -m "update podspec" $version
 git push --tags
-
-pod trunk register phatgialt@gmail.com 'quanle' --description='macbook pro'
-
-pod trunk push 'my-framework.podspec' --allow-warnings
