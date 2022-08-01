@@ -1,12 +1,12 @@
 #!/bin/bash
 
-sources="https://github.com/CocoaPods/Specs.git"
+sources="https://github.com/quanlebbv/MyFrameworkDistribution.git"
 
 # Grab pod name
 podspecName=$(basename $(find . -name *.podspec) | sed 's/.podspec//g' )
 version=$(awk '/\.version/' $podspecName.podspec | awk '/[0-9]\.[0-9]\.[0-9]/' | sed 's/.version//g'  | sed 's/[^0-9/.]//g')
 
-pod lib lint --allow-warnings
+pod lib lint --allow-warnings --sources=$sources
 
 # Pod lint fail
 if [ $? != 0 ];then
