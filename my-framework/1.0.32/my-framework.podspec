@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios
   s.swift_version = '5.3'
   s.source       = { :git => "git@github.com:quanlebbv/MyFrameworkDistribution.git", :tag => s.version.to_s }
-  s.exclude_files = ['./source/**']
+  s.exclude_files = ['./source/**', './README.md']
   s.ios.deployment_target = '10.0'
   s.ios.preserve_paths = 'MyFramework.xcframework'
   s.ios.vendored_frameworks = 'MyFramework.xcframework'
