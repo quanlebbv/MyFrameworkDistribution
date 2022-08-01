@@ -20,6 +20,4 @@ git push
 git tag -m "update podspec" $version
 git push --tags
 
-pod repo push 'MyFrameworkDistribution' 'my-framework.podspec' --allow-warnings
-
-git pull
+pod trunk push 'my-framework.podspec' --allow-warnings
