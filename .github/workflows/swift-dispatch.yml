@@ -7,7 +7,7 @@ jobs:
     runs-on: macos-latest
     steps:
     - name: Checkout submodules
-    - uses: actions/checkout@v2
+      uses: actions/checkout@v2
       with:
         submodules: 'true'
         token: ${{ secrets.ACCESS_TOKEN }}
