@@ -19,5 +19,5 @@ git tag -m "update podspec" $version
 git push --tags
 
 git branch $version
-git checkout $version
+git switch $version
 git push --set-upstream origin $version 
