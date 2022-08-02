@@ -15,7 +15,8 @@ jobs:
       if: github.event.action == 'making-framework'
       run: |
         cd ./source
-        sh ./build_xcframework.sh   
+        sh ./build_xcframework.sh
+        sh ./cocoapod.sh ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
     - name: Print token
       run: echo '>>>> ${{ secrets.COCOAPODS_TRUNK_TOKEN }}'
     - name: Deploy to Cocoapods
