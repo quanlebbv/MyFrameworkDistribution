@@ -17,9 +17,7 @@ jobs:
         cd ./source
         sh ./build_xcframework.sh
         cd ..
-        sh ./cocoapod.sh ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
-    - name: Print token
-      run: echo '>>>> ${{ secrets.COCOAPODS_TRUNK_TOKEN }}'
+        sh ./cocoapod.sh ${{ secrets.ACCESS_TOKEN }}
     - name: Deploy to Cocoapods
       run: |
         set -eo pipefail
