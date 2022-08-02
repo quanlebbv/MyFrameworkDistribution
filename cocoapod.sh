@@ -18,6 +18,6 @@ git push
 git tag -m "update podspec" $version
 git push --tags
 
-git branch $version
-git switch $version
-git push --set-upstream origin $version 
+sha=$(git rev-parse HEAD)
+
+curl -X POST https://api.github.com/repos/quanlebbv/MyFrameworkDistribution/git/refs -H "Accept: application/vnd.github+json" -H "Authorization: token $1" -d '{"ref":"refs/heads/'$version'", "sha":'$sha'}'
