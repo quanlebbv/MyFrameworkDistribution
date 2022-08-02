@@ -15,9 +15,9 @@ git add -A
 git commit -m 'updated package.'
 git push
 
-git tag -m "update podspec" $version
-git push --tags
-
 git branch $version
 git checkout $version
 git push --set-upstream origin $version 
+
+git tag -m "update podspec" $version
+git push --tags
