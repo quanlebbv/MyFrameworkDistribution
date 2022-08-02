@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'my-framework'
-  s.version      = '1.0.43'
+  s.version      = '2.0.0'
   s.summary      = 'abc'
   s.homepage     = 'xyz'
   s.author       = { 'Name' => 'info@example.com' }
@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
   s.platform     = :ios
   s.swift_version = '5.3'
-  s.source       = { :git => "git@github.com:quanlebbv/MyFrameworkDistribution.git", :tag => s.version.to_s }
+  s.source       = { :git => "https://github.com/quanlebbv/MyFrameworkDistribution.git", :tag => s.version.to_s }
   s.exclude_files = ['./source/**']
   s.ios.deployment_target = '10.0'
   s.ios.preserve_paths = 'MyFramework.xcframework'
