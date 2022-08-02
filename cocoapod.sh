@@ -17,6 +17,7 @@ git push
 
 git tag -m "update podspec" $version
 git push --tags
+
 sha=$(git rev-parse origin/main)
 ref=refs/heads/$version
 
